@@ -1,0 +1,40 @@
+{ 
+  "entrypoint": "index.html",
+  "shell": "src/ms-app.js",
+  "sources": [
+    "src/**/*",
+    "manifest/**",
+    "package.json"
+  ],
+  "extraDependencies": [
+    "manifest.json",
+    "node_modules/@webcomponents/webcomponentsjs/**"
+  ],  
+  "moduleResolution": "node",
+  "npm": true,
+  "lint": {
+    "rules": [
+      "polymer-3"
+    ]
+  },
+  "builds": [
+    { 
+      "name": "es5prod",
+      "preset": "es5-bundled",
+      "bunble": true,
+      "js": {"minify": true, "compile": true},
+      "css": {"minify": true},
+      "html": {"minify": true},      
+      "addServiceWorker": true
+    },
+    { 
+      "name": "es6prod",
+      "preset": "es6-unbundled",
+      "bunble": true,
+      "js": {"minify": true, "compile": true},
+      "css": {"minify": true},
+      "html": {"minify": true},      
+      "addServiceWorker": true
+    }
+  ]  
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Twitter Coding Challenged",
+  "short_name": "TCC",
+  "start_url": "/",
+  "display": "standalone"
+}
